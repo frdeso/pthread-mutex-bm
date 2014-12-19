@@ -121,43 +121,43 @@ void multipleContentionRatio()
 		time_execution(&contentedLock,NULL);
 		pthread_join(thr, &ret);
 
+		pthread_create(&thr, NULL, &second_thread, (void*) 1);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 2);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 3);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 4);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 5);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 6);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 7);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 8);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
+		pthread_create(&thr, NULL, &second_thread, (void*) 9);
+		time_execution(&contentedLock,NULL);
+		pthread_join(thr, &ret);
+
 		pthread_create(&thr, NULL, &second_thread, (void*) 10);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 20);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 30);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 40);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 50);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 60);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 70);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 80);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 90);
-		time_execution(&contentedLock,NULL);
-		pthread_join(thr, &ret);
-
-		pthread_create(&thr, NULL, &second_thread, (void*) 100);
 		time_execution(&contentedLock,NULL);
 		pthread_join(thr, &ret);
 
