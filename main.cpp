@@ -166,12 +166,12 @@ int main()
 {
 	std::cout<<"Single Lock"<<","<<"Double Lock"<<","
 				<<"Recursive"<<","<<"Random"<<","
-				<<"Content 0%"<<","	<<"Content 10%"
-				<<","<<"Content 20%"<<","<<"Content 30%"
-				<<","<<"Content 40%"<<","<<"Content 50%"
-				<<","<<"Content 60%"<<","<<"Content 70%"
-				<<","<<"Content 80%"<<","<<"Content 90%"
-				<<","<<"Content 100%"<<std::endl;
+				<<"Content 0%"<<","	<<"Content 1%"
+				<<","<<"Content 2%"<<","<<"Content 3%"
+				<<","<<"Content 4%"<<","<<"Content 5%"
+				<<","<<"Content 6%"<<","<<"Content 7%"
+				<<","<<"Content 8%"<<","<<"Content 9%"
+				<<","<<"Content 10%"<<std::endl;
 
 	for(int i = 0; i < 10; ++i){
 		std::cout<<i<<",";
