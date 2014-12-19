@@ -6,6 +6,7 @@
 #include <ctime>
 long long int num_iter = 5000000;
 pthread_mutex_t global_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
+pthread_mutex_t dummy_mutex = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
 bool *randArray;
 void singleLock()
 {
@@ -79,6 +80,11 @@ void *second_thread(void *arg)
 		{
 			pthread_mutex_lock(&global_mutex);
 			pthread_mutex_unlock(&global_mutex);
+		}
+		else
+		{
+			pthread_mutex_lock(&dummy_mutex);
+			pthread_mutex_unlock(&dummy_mutex);
 		}
 	}
 }
