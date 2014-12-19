@@ -81,14 +81,18 @@ void time_execution(void (*fct) (void), void (*pre_fct) (void))
 	fct();
 	end = std::chrono::system_clock::now();
 	std::chrono::duration<double> elapsed_seconds = end-start;
-	std::cout<<elapsed_seconds.count()<<std::endl;
+	std::cout<<elapsed_seconds.count()<<",";
 }
 
 int main()
 { 
-	time_execution(&singleLock, NULL);
-	time_execution(&doubleLock,NULL);
-	time_execution(&recursiveLock,NULL);
-	time_execution(&randLock,&generateRandomArray);
+	for(int i = 0; i < 20; ++i){
+		std::cout<<i<<",";
+		time_execution(&singleLock, NULL);
+		time_execution(&doubleLock,NULL);
+		time_execution(&recursiveLock,NULL);
+		time_execution(&randLock,&generateRandomArray);
+		std::cout<<std::endl;
+	}
 	return 0;
 }
